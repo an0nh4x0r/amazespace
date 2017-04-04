@@ -8,7 +8,7 @@ exports = module.exports = __webpack_require__(44)();
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "h1 {\n  text-align: center;\n}\n\np {\n  text-align: center;\n}\n", ""]);
 
 // exports
 
@@ -21,7 +21,7 @@ module.exports = module.exports.toString();
 /***/ 135:
 /***/ (function(module, exports) {
 
-module.exports = "<h1>\n  {{title}}\n</h1>\n"
+module.exports = "<h1>Welcome to AmazeSpace</h1>\n<p>This project is built using Node.js, Express.js, Angular 4 & MongoDB</p>\n"
 
 /***/ }),
 
