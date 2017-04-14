@@ -17,6 +17,10 @@ var shoppingSchema = new Schema({
     productPrice: {
         type: Number,
         required: true
+    },
+    createdOn: {
+        type: Date,
+        default: new Date()
     }
 });
 

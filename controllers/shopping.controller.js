@@ -19,7 +19,26 @@ module.exports.addData = function (req, res, next) {
             console.log(err);
         } else {
             console.log('data saved to db');
+            res.json({
+                success: true,
+                message: 'Data saved in database. Please view the data at https://theamaze.space/shopping'
+            })
         }
+    });
+
+};
+
+module.exports.showData = function (req, res, next) {
+
+    var query = ShoppingModel.find();
+    query.sort({
+        date: -1
+    });
+
+    query.exec(function (err, result) {
+        res.render('shopping', {
+            results: result
+        })
     });
 
 };

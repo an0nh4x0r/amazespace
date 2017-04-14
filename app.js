@@ -29,11 +29,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/shopping', function (req, res, next) {
-    res.send('Welcome i have been expecting you!');
+    return shoppingController.showData(req, res, next);
 });
 
 app.post('/shopping', function (req, res, next) {
-    return shoppingController.addData(req, res);
+    return shoppingController.addData(req, res, next);
 });
 
 app.get('*', function (req, res) {
