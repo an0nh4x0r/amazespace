@@ -34,21 +34,22 @@ html(lang='en')
                 p
                     a.btn.btn-lg.btn-primary(href='/shopping/docs', role='button') View Docs
 
-            table.table.table-rows.table-bordered.table-striped
-                tr
-                    th  Ordered On
-                    th  First Name
-                    th  Last Name
-                    th  Product Name
-                    th  Product Price
-                if results
-                    each result in results
-                        tr
-                            td= result.createdOn
-                            td= result.firstName
-                            td= result.lastName
-                            td= result.productName
-                            td= result.productPrice
+            .table-responsive
+                table.table.table-rows.table-bordered.table-striped
+                    tr
+                        th  Ordered On
+                        th  First Name
+                        th  Last Name
+                        th  Product Name
+                        th  Product Price
+                    if results
+                        each result in results
+                            tr
+                                td= result.createdOn
+                                td= result.firstName
+                                td= result.lastName
+                                td= result.productName
+                                td= result.productPrice
 
 
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
