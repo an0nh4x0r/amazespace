@@ -7,7 +7,7 @@ html(lang='en')
         meta(name='description', content='')
         meta(name='author', content='')
         link(rel='icon', href='../../favicon.ico')
-        title Shopping
+        title Docs - Shopping
         link(href='https://bootswatch.com/journal/bootstrap.min.css', rel='stylesheet')
     body
         nav.navbar.navbar-default
@@ -22,33 +22,27 @@ html(lang='en')
                     a.navbar-brand(href='#') Shopping App
                 #navbar.navbar-collapse.collapse
                     ul.nav.navbar-nav
-                        li.active
-                            a(href='/shopping') Home
                         li
+                            a(href='/shopping') Home
+                        li.active
                             a(href='/shopping/docs') Docs
 
         .container
-            .jumbotron
-                h1 Welcome, I've Been Expecting You!
-                p This is a web frontend of all the data saved using a shopping app developed by Deeksha Dhanwani
-                p Here you'll see all the data fetched directly from Database
-                p
-                    a.btn.btn-lg.btn-primary(href='/shopping/docs', role='button') View Docs
+            h3.text-center.page-header  Documentation on adding data to the server
 
-            table.table.table-rows.table-bordered.table-striped
-                tr
-                    th  First Name
-                    th  Last Name
-                    th  Product Name
-                    th  Product Price
-                if results
-                    each result in results
-                        tr
-                            td= result.firstName
-                            td= result.lastName
-                            td= result.productName
-                            td= result.productPrice
+            p Use&nbsp;
+                strong POSTMAN&nbsp;
+                | to post data using following keys
 
+            ol
+                strong Keys
+                li  firstName
+                li  lastName
+                li  productName
+                li  productPrice
+
+            p on https://theamaze.space/shopping using POST request (Body section, x-www-form-urlencoded)
+            
 
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
         script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')

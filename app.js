@@ -36,6 +36,10 @@ app.post('/shopping', function (req, res, next) {
     return shoppingController.addData(req, res, next);
 });
 
+app.get('/shopping/docs', function (req, res, next) {
+    res.render('docs');
+});
+
 app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname, 'public/index.html'));
 });
