@@ -36,6 +36,7 @@ html(lang='en')
 
             table.table.table-rows.table-bordered.table-striped
                 tr
+                    th  Ordered On
                     th  First Name
                     th  Last Name
                     th  Product Name
@@ -43,6 +44,7 @@ html(lang='en')
                 if results
                     each result in results
                         tr
+                            td= result.createdOn
                             td= result.firstName
                             td= result.lastName
                             td= result.productName

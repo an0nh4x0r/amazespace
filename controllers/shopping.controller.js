@@ -31,7 +31,7 @@ module.exports.addData = function (req, res, next) {
 module.exports.showData = function (req, res, next) {
 
     var query = ShoppingModel.find();
-    query.sort('field -date');
+    query.sort('field -createdOn');
 
     query.exec(function (err, result) {
         res.render('shopping', {
