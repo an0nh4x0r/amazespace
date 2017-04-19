@@ -15,7 +15,7 @@ var shoppingSchema = new Schema({
         required: true
     },
     productPrice: {
-        type: Number,
+        type: String,
         required: true
     },
     createdOn: {
