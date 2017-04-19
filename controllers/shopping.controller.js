@@ -7,6 +7,8 @@ module.exports.addData = function (req, res, next) {
         productName = req.body.productName,
         productPrice = req.body.productPrice;
 
+    productPrice = parseInt(productPrice);
+
     var customerEntry = new ShoppingModel({
         firstName: firstName,
         lastName: lastName,
