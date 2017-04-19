@@ -42,6 +42,12 @@ html(lang='en')
                         th  Last Name
                         th  Product Name
                         th  Product Price
+                        th  Card Name
+                        th  Card Number
+                        th  CVC
+                        th  Expiry Date
+                        th  Contact
+                        th  address
                     if results
                         each result in results
                             tr
@@ -50,6 +56,12 @@ html(lang='en')
                                 td= result.lastName
                                 td= result.productName
                                 td= result.productPrice
+                                td= result.cardName
+                                td= result.cardNumber
+                                td= result.cvc
+                                td= result.expiryDate
+                                td= result.contact
+                                td= result.address
 
 
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
